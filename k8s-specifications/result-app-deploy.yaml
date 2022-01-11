@@ -6,7 +6,7 @@ metadata:
     name: result-app-deploy
     app: demo-voting-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       name: result-app-pod

@@ -8,11 +8,11 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
+    matchLabels:            # pod's labels
       name: worker-app-pod
       app: demo-voting-app
     
-  template:
+  template:                 # pod's metadata and spec
     metadata:
       name: worker-app-pod
       labels:
