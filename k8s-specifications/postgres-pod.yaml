@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-pod
+  labels:
+    name: postgres-pod
+    app: demo-voting-app
+spec:
+  containers:
+    - name: postgres          # here is the postgre container name which is used in code
+      image: postgres
+      ports:
+        - containerPort: 5432 # default port for postgre
+      env:
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "postgres"
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: trust
+          
